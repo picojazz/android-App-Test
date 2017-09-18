@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SupInfo</string>
+    <string name="tittleApp">SUP\'INFO</string>
+    <string name="username">Identifiant</string>
+    <string name="password">Mot de passe</string>
+    <string name="sign_up">S\'inscrire</string>
+    <string name="log_in">se connecter</string>
+    <string name="title_activity_home">Accueil</string>
+
+    <string name="navigation_drawer_open">Ouvrir le munu lateral</string>
+    <string name="navigation_drawer_close">fermer le munu lateral/string>
+
+    <string name="action_settings">preferences</string>
+</resources>
