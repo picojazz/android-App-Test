@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SupInfo</string>
+    <string name="tittleApp">SUP\'INFO</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="sign_up">sign up</string>
+    <string name="log_in">log in</string>
+</resources>
