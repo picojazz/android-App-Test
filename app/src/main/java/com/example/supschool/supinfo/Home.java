@@ -1,5 +1,6 @@
 package com.example.supschool.supinfo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -84,7 +85,8 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_formation) {
-            // Handle the camera action
+            Intent intent = new Intent(Home.this,FormationActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_mark) {
 
         } else if (id == R.id.nav_university) {
