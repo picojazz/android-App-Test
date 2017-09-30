@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tabFormation">
+        <item>RTC</item>
+        <item>Programmation</item>
+        <item>Info Gestion</item>
+        <item>Transport Logistique</item>
+        <item>Banque Finance</item>
+        <item>Maintenance</item>
+        <item>Commerce</item>
+    </string-array>
+    <string-array name="tabDetailFormation">
+        <item>reseaux,cablage,maths,algo,admin reseau,admin sys</item>
+        <item>c,java,php,vb,j2ee,sql,oracle,asp,js,developer,analyste prog</item>
+        <item>Info Gestion</item>
+        <item>Transport Logistique</item>
+        <item>Banque Finance</item>
+        <item>Maintenance</item>
+        <item>Commerce</item>
+    </string-array>
+
+</resources>

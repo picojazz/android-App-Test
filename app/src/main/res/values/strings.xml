@@ -6,9 +6,17 @@
     <string name="sign_up">sign up</string>
     <string name="log_in">log in</string>
     <string name="title_activity_home">Home</string>
-
+    <string name="errorEmptyField">field should not empty</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="supinfo_supinfo_com">supinfo@supinfo.com</string>
+    <string name="formaton">Formaton</string>
+    <string name="mark">mark</string>
+    <string name="university">university</string>
+    <string name="help">Help</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="communicate">Communicate</string>
 </resources>

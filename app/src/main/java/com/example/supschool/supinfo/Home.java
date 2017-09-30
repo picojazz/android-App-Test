@@ -16,10 +16,13 @@ import android.view.MenuItem;
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private String username ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        username = getIntent().getStringExtra("LOGIN");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -82,7 +85,7 @@ public class Home extends AppCompatActivity
 
         if (id == R.id.nav_formation) {
             // Handle the camera action
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_mark) {
 
         } else if (id == R.id.nav_university) {
 

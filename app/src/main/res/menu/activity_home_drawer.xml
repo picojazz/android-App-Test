@@ -5,31 +5,31 @@
         <item
             android:id="@+id/nav_formation"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Formaton" />
+            android:title="@string/formaton" />
         <item
             android:id="@+id/nav_mark"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="mark" />
+            android:title="@string/mark" />
         <item
             android:id="@+id/nav_university"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="university" />
+            android:title="@string/university" />
         <item
             android:id="@+id/nav_help"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Help" />
+            android:title="@string/help" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="@string/communicate">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="@string/share" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="@string/send" />
         </menu>
     </item>
 

@@ -30,6 +30,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="supinfo@supinfo.com" />
+        android:text="@string/supinfo_supinfo_com" />
 
 </LinearLayout>

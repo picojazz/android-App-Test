@@ -6,9 +6,18 @@
     <string name="sign_up">S\'inscrire</string>
     <string name="log_in">se connecter</string>
     <string name="title_activity_home">Accueil</string>
-
+    <string name="errorEmptyField">Veuillez renseigner les champs !</string>
     <string name="navigation_drawer_open">Ouvrir le munu lateral</string>
-    <string name="navigation_drawer_close">fermer le munu lateral/string>
+    <string name="navigation_drawer_close">fermer le munu lateral</string>
 
+
+    <string name="supinfo_supinfo_com">supinfo@supinfo.com</string>
+    <string name="formaton">Formaton</string>
+    <string name="mark">notes</string>
+    <string name="university">Universite</string>
+    <string name="help">Aide</string>
+    <string name="share">Partager</string>
+    <string name="send">Envoyer</string>
     <string name="action_settings">preferences</string>
+    <string name="communicate">communication</string>
 </resources>
