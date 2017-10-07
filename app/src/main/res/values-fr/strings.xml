@@ -21,4 +21,6 @@
     <string name="action_settings">preferences</string>
     <string name="communicate">communication</string>
     <string name="cancel">Annuler</string>
+    <string name="first_name">Prenom</string>
+    <string name="last_name">Nom</string>
 </resources>

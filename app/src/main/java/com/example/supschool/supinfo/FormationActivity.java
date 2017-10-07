@@ -1,6 +1,7 @@
 package com.example.supschool.supinfo;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,7 +41,8 @@ public class FormationActivity extends AppCompatActivity {
                 dialog.setPositiveButton(getString(R.string.sign_up), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        Intent intent = new Intent(FormationActivity.this,InscriptionActivity.class);
+                        startActivity(intent);
                     }
                 });
                 dialog.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {

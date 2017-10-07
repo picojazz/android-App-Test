@@ -20,5 +20,12 @@
     <string name="send">Send</string>
     <string name="communicate">Communicate</string>
     <string name="cancel">Cancel</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="degres">Degres :</string>
+    <string name="bac">Bac</string>
+    <string name="bachelor">Bachelor</string>
+    <string name="master">Master</string>
+    <string name="save">save</string>
 
 </resources>
