@@ -27,5 +27,9 @@
     <string name="bachelor">Bachelor</string>
     <string name="master">Master</string>
     <string name="save">save</string>
+    <string name="waiting">waiting ....</string>
+    <string name="errorParameters">Error parameters</string>
+    <string name="welcome">Welcome</string>
+    <string name="errorServer">error server !</string>
 
 </resources>

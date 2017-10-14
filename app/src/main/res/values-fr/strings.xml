@@ -23,4 +23,8 @@
     <string name="cancel">Annuler</string>
     <string name="first_name">Prenom</string>
     <string name="last_name">Nom</string>
+    <string name="waiting">veuillez patienter ...</string>
+    <string name="errorParameters">Erreur parametres incorrectes</string>
+    <string name="welcome">Bienvenue </string>
+    <string name="errorServer">erreur du serveur !! </string>
 </resources>
