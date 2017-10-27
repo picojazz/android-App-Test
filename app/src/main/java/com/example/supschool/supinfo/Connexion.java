@@ -44,7 +44,7 @@ public class Connexion extends AppCompatActivity {
                 if (username.isEmpty() || password.isEmpty()){
                     Toast.makeText(Connexion.this, getString(R.string.errorEmptyField), Toast.LENGTH_SHORT).show();
                 }else{
-                   String url = "test";
+                   String url ="http://192.168.56.1:30/sup_school/connexion.php?login="+username+"&password="+password;
                     loginServer ls = new loginServer();
                     ls.execute(url);
                 }
@@ -73,20 +73,21 @@ public class Connexion extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(String s) {
+        protected void onPostExecute(String s)  {
             dialog.dismiss();
-                if (s == null)
+                if (s == null) {
                     Toast.makeText(Connexion.this, getString(R.string.errorServer), Toast.LENGTH_SHORT).show();
                     return;
-
+                }
+            //JSONObject jsonObject = new JSONObject();
                 try {
-                    JSONObject jsonObject = new JSONObject(s);
-                    String status = jsonObject.getString("status");
+                    JSONObject json = new JSONObject(s);
+                    String status = json.getString("status");
                     if (status.equals("KO")){
                         Toast.makeText(Connexion.this, getString(R.string.errorParameters), Toast.LENGTH_SHORT).show();
                     }else{
-                        String firstname = jsonObject.getString("first_name");
-                        String lastname = jsonObject.getString("last_name");
+                        String firstname = json.getString("first_name");
+                        String lastname = json.getString("last_name");
                         String welcome = getString(R.string.welcome)+" "+firstname+" "+lastname;
                         Toast.makeText(Connexion.this, welcome, Toast.LENGTH_SHORT).show();
                         Intent intent =new Intent(Connexion.this,Home.class);
