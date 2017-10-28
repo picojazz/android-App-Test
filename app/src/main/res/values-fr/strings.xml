@@ -27,4 +27,6 @@
     <string name="errorParameters">Erreur parametres incorrectes</string>
     <string name="welcome">Bienvenue </string>
     <string name="errorServer">erreur du serveur !! </string>
+    <string name="inscriptionKO">Inscription echouée</string>
+    <string name="inscriptionOK">Inscription reussie</string>
 </resources>

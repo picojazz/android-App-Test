@@ -42,6 +42,7 @@ public class FormationActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent = new Intent(FormationActivity.this,InscriptionActivity.class);
+                        intent.putExtra("FORMATION",formation);
                         startActivity(intent);
                     }
                 });

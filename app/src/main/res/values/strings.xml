@@ -30,6 +30,8 @@
     <string name="waiting">waiting ....</string>
     <string name="errorParameters">Error parameters</string>
     <string name="welcome">Welcome</string>
-    <string name="errorServer">error server !</string>
+    <string name="inscriptionKO">Sign Up failed</string>
+    <string name="inscriptionOK">Sign Up successful</string>
+
 
 </resources>
