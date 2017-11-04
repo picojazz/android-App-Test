@@ -1,6 +1,8 @@
 package com.example.supschool.supinfo;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,19 +15,35 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.lang.reflect.Array;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private String username ;
+    private String login ;
+    private ProgressDialog dialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        username = getIntent().getStringExtra("LOGIN");
+        login = getIntent().getStringExtra("LOGIN");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        dialog = new ProgressDialog(this);
+        dialog.setMessage(getString(R.string.waiting));
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -88,7 +106,9 @@ public class Home extends AppCompatActivity
             Intent intent = new Intent(Home.this,FormationActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_mark) {
-
+            String url = "http://192.168.56.1:30/sup_school/mark.php?login="+login;
+            MarkServer markServer = new MarkServer();
+            markServer.execute(url);
         } else if (id == R.id.nav_university) {
 
         } else if (id == R.id.nav_help) {
@@ -102,5 +122,53 @@ public class Home extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    protected class MarkServer extends AsyncTask<String,Void,String>{
+        @Override
+        protected void onPreExecute() {
+            dialog.show();
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                HttpClient client = new DefaultHttpClient();
+                HttpGet get = new HttpGet(params[0]);
+                ResponseHandler<String> buffer = new BasicResponseHandler();
+                String result = client.execute(get,buffer);
+                return  result;
+            }catch (Exception e){
+                return null;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            dialog.dismiss();
+            if (s == null) {
+                Toast.makeText(Home.this, getString(R.string.errorServer), Toast.LENGTH_SHORT).show();
+                return;
+            }
+            try{
+                JSONObject json = new JSONObject(s);
+                JSONArray array = json.getJSONArray("mark");
+                String notes ="";
+                for (int i=0 ; i < array.length(); i++){
+                    JSONObject element = array.getJSONObject(i);
+                    String course = element.getString("course");
+                    String grade = element.getString("grade");
+                    notes += course+" : "+grade+"\n\n";
+                }
+                Toast.makeText(Home.this,notes , Toast.LENGTH_SHORT).show();
+
+
+
+
+            }catch(Exception e){
+
+            }
+
+        }
     }
 }

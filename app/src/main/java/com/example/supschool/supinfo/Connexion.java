@@ -91,6 +91,7 @@ public class Connexion extends AppCompatActivity {
                         String welcome = getString(R.string.welcome)+" "+firstname+" "+lastname;
                         Toast.makeText(Connexion.this, welcome, Toast.LENGTH_SHORT).show();
                         Intent intent =new Intent(Connexion.this,Home.class);
+                        intent.putExtra("LOGIN",username);
                         startActivity(intent);
 
                     }
