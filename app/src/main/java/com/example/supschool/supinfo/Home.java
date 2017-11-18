@@ -110,7 +110,8 @@ public class Home extends AppCompatActivity
             MarkServer markServer = new MarkServer();
             markServer.execute(url);
         } else if (id == R.id.nav_university) {
-
+            Intent intent = new Intent(Home.this,UniversityActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_help) {
 
         } else if (id == R.id.nav_share) {

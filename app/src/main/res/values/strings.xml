@@ -32,6 +32,7 @@
     <string name="welcome">Welcome</string>
     <string name="inscriptionKO">Sign Up failed</string>
     <string name="inscriptionOK">Sign Up successful</string>
+    <string name="title_activity_university">Map</string>
 
 
 </resources>
