@@ -45,7 +45,8 @@
 
         <activity
             android:name=".UniversityActivity"
-            android:label="@string/title_activity_university"></activity>
+            android:label="@string/title_activity_university" />
+        <activity android:name=".BDActivity"></activity>
     </application>
 
 </manifest>

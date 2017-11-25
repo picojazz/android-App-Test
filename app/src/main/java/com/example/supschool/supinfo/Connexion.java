@@ -44,9 +44,11 @@ public class Connexion extends AppCompatActivity {
                 if (username.isEmpty() || password.isEmpty()){
                     Toast.makeText(Connexion.this, getString(R.string.errorEmptyField), Toast.LENGTH_SHORT).show();
                 }else{
-                   String url ="http://192.168.56.1:30/sup_school/connexion.php?login="+username+"&password="+password;
-                    loginServer ls = new loginServer();
-                    ls.execute(url);
+//                   String url ="http://192.168.56.1:30/sup_school/connexion.php?login="+username+"&password="+password;
+//                    loginServer ls = new loginServer();
+//                    ls.execute(url);
+                    Intent intent =new Intent(Connexion.this,BDActivity.class);
+                    startActivity(intent);
                 }
             }
         });
